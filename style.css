@@ -50,9 +50,48 @@ body {
   float: left;
 }
 
+#spin{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 100px;
+  background-color: gold;
+  animation-name: spin;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  border-width: 3px;
+  border-style: solid;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(90deg) scale(1.9);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 #clearfix {
   width: 100%;
   height: 100px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #spin {
+    animation: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #center {
+    background-color: black;
+  }
 }
 
 @media screen and (max-width:600px) {
