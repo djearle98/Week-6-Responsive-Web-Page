@@ -1,127 +1,67 @@
+@import url(https://www.db.onlinewebfonts.com/c/000be6a5acfcd4e4a425e9f1bb6c80f0?family=Google+Sans);
+
+:root{
+  --icon-color: #636060;
+  --primary-blue: #1a73e8;
+}
+
 body {
   margin: 0;
-}
-
-#page {
-  width: 100vw;
-  height: 100vh;
-}
-
-#header {
+  display: block;
+	font-family: Product Sans;
+  font-weight: 100;
+  font-size: 12px;
   width: 100%;
-  height: 100px;
-  background-color: lightgray;
-  z-index: 997;
-  position: fixed;
-  top: 0;
 }
 
-#header-clearfix {
-  width: 100%;
-  height: 100px;
-  position: relative;
+#nav-bar{
+  display: flex;
+  align-items: center;
 }
 
-#left,
-#center,
-#right {
-  height: 3000px;
-  float: left;
-  position: relative;
+.icon {
+  fill: var(--icon-color);
+  width: 24px;
+  height: 24px;
 }
 
-#left,
-#right {
-  width: 20%;
-  background-color: lightblue;
+#hamburger-icon {
+  fill: #423f3f; 
 }
 
-#center {
-  width: 60%;
-  background-color: white;
+#profile-icon {
+  width: 32px;
+  height: 32px;
 }
 
-#footer {
-  height: 100vh;
-  background-color: darkgray;
-  width: 100%;
-  position: relative;
-  z-index: 998;
+.background-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.text-white {
+  color: white;
+}
+
+.text-white a{
+  color: white;
+}
+
+.float-left {
   float: left;
 }
-
-#spin{
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  margin-top: 100px;
-  background-color: gold;
-  animation-name: spin;
-  animation-duration: 2500ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  border-width: 3px;
-  border-style: solid;
-
+.float-right {
+  float: right;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(90deg) scale(1.9);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+#promo-bar {
+  font-size: 1em;
+  text-align: center;
+  padding: 1em 1em 1.2em 1em;
 }
 
-#clearfix {
-  width: 100%;
-  height: 100px;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  #spin {
-    animation: none;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  #center {
-    background-color: black;
-  }
-}
-
-@media screen and (max-width:600px) {
-
-  #left,
-  #right,
-  #center {
-    width: 100%;
-    height: 500px;
-  }
-
-  #header {
-    top: calc(100vh - 100px);
-    z-index: 999;
-  }
-
-  #header-clearfix {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  #right {
-    display: none;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  #content {
-    width: 1200px;
-    margin: auto;
-  }
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
